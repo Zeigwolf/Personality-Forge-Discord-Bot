@@ -1,5 +1,5 @@
 // 1) Install VSCode -- https://code.visualstudio.com/download
-// 2) Set up your application in the discord developer portal to create your bot name -- Worn off Keys -- https://discord.com/developers/applications
+// 2) Set up your application in the discord developer portal to create your bot name -- https://discord.com/developers/applications
 // 3) Install node.js -- https://nodejs.org/en/download/
 // 4) Create a folder for bot, drag folder into vs code to sync
 // 5) In VSCode, Terminal, New Terminal
@@ -52,7 +52,6 @@ client.on("messageCreate", (message) => {
                 console.log("fetching")
                 let response = await fetch(`https://www.personalityforge.com/api/chat/?apiKey=${apiKey}&chatBotID=${botID}&message=${message.content}&externalID=${message.author.tag}`)
                 let data = await response.json()
-                console.log(data)
                 let body = data.message.message
                 let reply = `${body}`.replace(/<br>/g,"\n")
                 message.channel.send(reply)
