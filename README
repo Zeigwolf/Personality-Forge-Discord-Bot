@@ -1,0 +1,40 @@
+
+////// Using this code --- The node modules are already included for you
+
+// 1) Install VSCode -- https://code.visualstudio.com/download
+// 2) Install node.js -- https://nodejs.org/en/download/
+// 3) Set up your application in the discord developer portal to create your bot -- https://discord.com/developers/applications
+// 4) Once your bot is created, go to "Applications", select your bot, "Bot", and under "Privileged Gateway Intents", tick "SERVER MEMBERS INTENT" and "MESSAGE CONTENT INTENT"
+// 5) Keep the portal open, we will return to it later
+// 6) Open VSCode, drag the "Personality Forge Discord Bot" folder into VSCode to sync it
+// 8) In the discord developer portal, under "Bot", "Build-A-Bot", click copy to get your Token. Paste this in your .env file after "TOKEN = "
+// 9) In The Personality Forge, under Intigrate, API, copy your API Key. Paste this in your .env file after "apiKey = "
+//10) In The Personality Forge, under Intigrate, API, copy your bot ID. Paste this in your .env file after "botID = "
+//11) NEVER SHARE THE CONTENTS OF YOUR .env FILE, these are the literal keys to your application, you don't want someone else behind the wheel. Reset them if they ever leak
+//12) You're done! In the VSCode menu bar, click Terminal, New Terminal, type "node index.js" in the terminal to run your bot, use Ctrl+c to stop running your bot
+//13) These files can be hosted to run 24/7, but that's up to you
+
+
+
+////// From Scratch --- Doing it all yourself --- Still working on this
+
+// 1) Install VSCode -- https://code.visualstudio.com/download
+// 3) Install node.js -- https://nodejs.org/en/download/
+// 2) Set up your application in the discord developer portal to create your bot -- https://discord.com/developers/applications
+// 3) Once your bot is created, go to "Applications", select your bot, "Bot", and under "Privileged Gateway Intents" tick "SERVER MEMBERS INTENT" and "MESSAGE CONTENT INTENT"
+// 4) Keep the portal open, we will return to it later
+// 4) Create a folder for your bot, drag the new folder into vs code to sync it
+// 5) In VSCode, Terminal, New Terminal
+// 6) In the terminal, type "npm init -y", you should now have a Package.json file in your folder
+// 7) In the terminal, type "npm install discord.js donenv", you should now have a node_modules folder, and a Package-lock.json file in your folder
+// 8) Create a new file called "index.js"
+// 9) Create a new file called ".env"
+//10) In the .env file, add "TOKEN=123abc"
+//11) In the discord developer portal, under "Bot", "Build-A-Bot", click copy to get your Token. Replace "123abc" with this token in your .env file
+
+
+
+// Add your bot to your discord server
+// To run your bot, type "node index.js" in the terminal, use Ctrl+c to stop running your bot
+
+
