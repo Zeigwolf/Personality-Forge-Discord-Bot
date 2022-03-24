@@ -95,3 +95,7 @@ botID =
 //18) You're done! In the VSCode menu bar, click Terminal, New Terminal, type "node index.js" in the terminal to run your bot, use Ctrl+c to stop running your bot
 //19) These files can be hosted to run 24/7, but that's up to you
 
+
+////// Inviting your bot to your discord server //////
+// 1) In the discord developer portal, under OAuth2, URL Generator. Under "SCOPES", tick "bot". Under BOT PERMISSIONS, tick "Read Messages/View Channels" and "Send Messages" 
+// 2) Copy the GENERATED URL at the bottom, and paste and search in a browser
