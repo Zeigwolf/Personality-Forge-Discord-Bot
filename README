@@ -34,7 +34,7 @@
 // 8) In the terminal, type "npm init -y", you should now have a Package.json file in your folder
 // 9) In the terminal, type "npm install discord.js donenv", you should now have a node_modules folder, and a Package-lock.json file in your folder
 //10) Create a new file called "index.js"
-//11)These are the contents of the index.js file
+//11) These are the contents of the index.js file
 const DiscordJS = require( "discord.js")
 const { Intents } = require("discord.js")
 const dotenv = require("dotenv")
