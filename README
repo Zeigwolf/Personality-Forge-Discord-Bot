@@ -2,7 +2,7 @@
 // Courtesy of Zeig Wolf
 
 
-////// Using this code --- The node modules are already included for you
+////// Using this code --- Everything is already included for you, just download and add your information
 
 // 1) Install VSCode -- https://code.visualstudio.com/download
 // 2) Install node.js -- https://nodejs.org/en/download/
@@ -22,7 +22,7 @@
 // 2) Copy the GENERATED URL at the bottom, paste and search in a browser
 
 
-////// From Scratch --- Doing it all yourself --- Still working on this
+////// From Scratch --- Doing it all yourself, ignore all provided files
 
 // 1) Install VSCode -- https://code.visualstudio.com/download
 // 2) Install node.js -- https://nodejs.org/en/download/
@@ -35,6 +35,7 @@
 // 9) In the terminal, type "npm install discord.js donenv", you should now have a node_modules folder, and a Package-lock.json file in your folder
 //10) Create a new file called "index.js"
 //11) These are the contents of the index.js file
+
 const DiscordJS = require( "discord.js")
 const { Intents } = require("discord.js")
 const dotenv = require("dotenv")
@@ -66,18 +67,18 @@ client.login(process.env.TOKEN)
 const apiKey = process.env.apikey
 const botID = process.env.BotID
 
-client.on("messageCreate", (message) => {
-    if (message.author.bot) {
+client.on("messageCreate", (message) => { //If someone sends a message,
+    if (message.author.bot) { //Ignore it if the message is from a bot,
         return
     }
-    if (message.channel.type == "DM") {
-        (async function forge() {
+    if (message.channel.type == "DM") { //If the message is from a DM,
+        (async function forge() { //Send a request to the PF API,
             try{
                 let response = await fetch(`https://www.personalityforge.com/api/chat/?apiKey=${apiKey}&chatBotID=${botID}&message=${message.content}&externalID=${message.author.tag}`)
                 let data = await response.json()
                 let body = data.message.message
-                let reply = `${body}`.replace(/<br>/g,"\n")
-                message.channel.send(reply)
+                let reply = `${body}`.replace(/<br>/g,"\n") //Replace PF line breaks with discord line breaks,
+                message.channel.send(reply) //And send a reply back
             } catch (error) {
                 console.error(error)
                 message.reply(`There was an error!`)
@@ -86,14 +87,17 @@ client.on("messageCreate", (message) => {
     }
 })
 
-client.on(`guildMemberAdd`, member => {
-    member.send("Welcome to the server! Chat to my bot here!")
+client.on(`guildMemberAdd`, member => { //If someone joins your server,
+    member.send("Welcome to the server! Chat to my bot here!") //DM them a welcome message to get started
 })
+
 //12) Create a new file called ".env"
 //13) These are the contents of the .env file
+
 TOKEN = 
 apiKey = 
 botID = 
+
 //14) In the discord developer portal, under "Bot", "Build-A-Bot", click copy to get your Token. Paste this token in your .env file after "TOKEN = ""
 //15) In The Personality Forge, under Intigrate, Chatbot API, copy your API Key. Paste this in your .env file after "apiKey = "
 //16) In The Personality Forge, find your botID, it can be found at the end of the address bar when working on your chatting with your bot, copy your bot ID. Paste this in your .env file after "botID = "
